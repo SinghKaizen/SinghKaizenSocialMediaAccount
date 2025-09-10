@@ -42,23 +42,26 @@
             overflow: hidden; /* Important for rounded corners */
         }
 
-        /* === NEW: Header Styles with Dark Theme === */
+        /* === NEW: Premium Header Style === */
         .site-header {
             padding: 25px;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #7bd66f; /* Dark charcoal color */
+            background-color: #1A202C; /* Premium Dark Charcoal */
+            border-bottom: 1px solid #e2e8f0;
         }
 
         .logo {
             max-width: 180px;
             height: auto;
+            filter: brightness(0) invert(1); /* Makes logo white */
         }
 
         /* Main Content Styles */
         .site-content {
             padding: 30px;
+            text-align: center; /* Center align all content */
         }
 
         .section-title {
@@ -75,7 +78,7 @@
             width: 100%;
             font-size: 15px;
             font-weight: 600;
-            color: #000000;
+            color: #4a5568; /* Softer color */
             padding: 8px 0;
             margin-bottom: 30px;
             text-align: center;
@@ -88,6 +91,7 @@
             align-items: flex-start;
             flex-wrap: wrap;
             gap: 25px;
+            margin-bottom: 40px; /* Space before the back button */
         }
 
         .social-profile {
@@ -105,7 +109,7 @@
             width: 65px;
             height: 65px;
             border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
         }
 
@@ -147,13 +151,34 @@
         .bluesky-bg      { background-color: #1285FE; }
         .truth-social-bg { background-color: #5F1A37; }
         
-        /* === NEW: Footer Styles with Dark Theme === */
+        /* === NEW: Back to Site Button Style === */
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            padding: 12px 30px;
+            border: 2px solid #cbd5e0;
+            border-radius: 50px; /* Pill shape */
+            color: #4a5568;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-button:hover {
+            background-color: #2d3748;
+            color: #ffffff;
+            border-color: #2d3748;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        /* === NEW: Premium Footer Style === */
         .site-footer {
             text-align: center;
             padding: 20px;
             font-size: 14px;
-            background-color: #000000; /* Dark charcoal color */
-            color: #ffffff; /* Light grey text for contrast */
+            background-color: #1A202C; /* Premium Dark Charcoal */
+            color: #a0aec0; /* Softer light grey text */
         }
     </style>
     <!-- === CSS STYLES END HERE === -->
@@ -223,6 +248,11 @@
                     <span class="icon-name">Truth Social</span>
                 </a>
             </div>
+
+            <!-- NEW: BACK TO SITE BUTTON -->
+            <a href="https://tinyurl.com/singhkaizen" class="back-button">
+                ← Back to Site
+            </a>
         </main>
         
         <!-- FOOTER SECTION -->
@@ -233,6 +263,3 @@
 
 </body>
 </html>
-
-
-
